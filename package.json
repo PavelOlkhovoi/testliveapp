@@ -4,7 +4,6 @@
     "test:headless": "cypress run"
   },
   "devDependencies": {
-    "cypress": "^13.6.3",
-    "cypress-iframe": "^1.0.1"
+    "cypress": "^13.6.3"
   }
 }

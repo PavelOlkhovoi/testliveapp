@@ -1,5 +1,3 @@
-import "cypress-iframe";
-
 describe("Smoke test topicmaps elektromobilitaet", () => {
   it.only("First loading auto", () => {
     cy.visit("https://wunda-geoportal.cismet.de/#/elektromobilitaet?title");
