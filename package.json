@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "cypress open",
-    "test:headless": "cypress run"
+    "test:headless": "cypress run --browser chrome"
   },
   "devDependencies": {
     "cypress": "^13.6.3"
