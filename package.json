@@ -6,7 +6,5 @@
   "devDependencies": {
     "cypress": "^13.6.3"
   },
-  "dependencies": {
-    "cypress-real-events": "^1.11.0"
-  }
+  "dependencies": {}
 }

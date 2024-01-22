@@ -1,3 +1,5 @@
+import "cypress-real-events/support";
+
 describe("Test of info box for electric car charging stations map", () => {
   beforeEach(() => {
     cy.visit("https://wunda-geoportal.cismet.de/#/elektromobilitaet?title");
@@ -82,10 +84,22 @@ describe("Test of info box for electric car charging stations map", () => {
     cy.url().should("include", "zoom=8");
   });
   it.only("Clicking on the phone icon opens a modal browser window", () => {
-    cy.on("window:confirm", (str) => {
+    cy.get('[title="Betreiber anrufen"]').click();
+
+    cy.on("window:prompt", (text) => {
+      // Здесь вы можете взаимодействовать с окном prompt
+      console.log("Prompt text:", text);
+
+      // Здесь введите логику, которую вы хотите проверить
+      // Например, проверьте, содержит ли текст какое-то ожидаемое значение
+      expect(text).to.include("expected text");
+
+      // Если вы хотите отменить действие, можно вернуть `false`
       return false;
     });
-    cy.get('[title="Betreiber anrufen"]').click();
+
+    // После того, как вы взаимодействуете с окном prompt, проверьте ожидаемое состояние
+    cy.url().should("not.include", "https://wunda-geoportal.cismet.de");
   });
   it("Clicking on the website icon opens a new tab", () => {
     cy.get('[title="Betreiberwebseite"]')
