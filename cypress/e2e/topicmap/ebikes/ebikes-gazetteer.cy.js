@@ -1,6 +1,6 @@
 describe("Test of ebikes Gazetteer", () => {
   beforeEach(() => {
-    cy.visit("https://wunda-geoportal.cismet.de/#/baeder");
+    cy.visit("https://wunda-geoportal.cismet.de/#/ebikes");
   });
 
   it("A tooltip with addresses appears when the address is correct", () => {
