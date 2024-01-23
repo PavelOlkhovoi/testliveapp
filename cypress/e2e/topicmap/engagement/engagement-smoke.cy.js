@@ -1,6 +1,6 @@
-describe("Smoke test for ebikes topic", () => {
+describe("Smoke test for engagement topic", () => {
   it("Map loads with key controls", () => {
-    cy.visit("https://wunda-geoportal.cismet.de/#/ebikes");
+    cy.visit("https://wunda-geoportal.cismet.de/#/ehrenamt");
 
     cy.get(".leaflet-control-zoom-out").should("be.exist");
     cy.get(".leaflet-control-zoom-out").click();
