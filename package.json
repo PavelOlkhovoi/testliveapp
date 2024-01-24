@@ -1,6 +1,8 @@
 {
   "scripts": {
     "test": "cypress open",
+    "test:smoke": "cypress run --spec \"cypress/e2e/smoke\"",
+    "test:gaz": "cypress run --spec \"cypress/e2e/gazetteer/**/*.js\"",
     "test:headless": "cypress run --browser chrome"
   },
   "devDependencies": {
