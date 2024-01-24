@@ -1,4 +1,3 @@
-let firstCompanyTitle;
 describe("Test of hydrogen filling station Gazetteer", () => {
   beforeEach(() => {
     cy.visit(

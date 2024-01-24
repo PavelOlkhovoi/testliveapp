@@ -1,7 +1,7 @@
 describe("Test of engagement Gazetteer", () => {
   beforeEach(() => {
     cy.visit("https://wunda-geoportal.cismet.de/#/ehrenamt");
-    // cy.wait(2000);
+    cy.wait(2000);
   });
 
   it("A tooltip with addresses appears when the address is correct", () => {
