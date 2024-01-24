@@ -1,7 +1,7 @@
 describe("Test of electric car charging Gazetteer", () => {
   beforeEach(() => {
     cy.visit("https://wunda-geoportal.cismet.de/#/elektromobilitaet?title");
-    // cy.wait(2000);
+    cy.wait(3000);
   });
 
   it("A tooltip with addresses appears when the address is correct", () => {
